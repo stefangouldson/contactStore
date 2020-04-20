@@ -27,7 +27,7 @@
         <h1>Contacts</h1>
 
         <ul class="list-group">
-            <li v-for="contact in list" class="list-group-item">
+            <li v-for="contact in list" :key="contact.id" class="list-group-item">
                 <strong>{{ contact.name }}</strong> {{ contact.email }} {{ contact.phone }}
                 <div class="btn-group float-right">
                     <button @click='showContact(contact.id)' class="btn btn-info btn-sm">Edit</button>
